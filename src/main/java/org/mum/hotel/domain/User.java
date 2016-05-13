@@ -1,7 +1,7 @@
 package org.mum.hotel.domain;
 
 public class User {
-	
+	//userclass
 	int userID;
 	String firstName;
 	String lastName;
