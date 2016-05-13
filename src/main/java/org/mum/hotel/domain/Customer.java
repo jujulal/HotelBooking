@@ -2,14 +2,23 @@ package org.mum.hotel.domain;
 
 
 public class Customer {
-	private int id; 
+	
+	private int customerNo; 
 	private String fristName; 
 	private String lastName;
-	public int getId() {
-		return id;
+	private String email; 
+	private String phone; 
+	private String street; 
+	private String city; 
+	private String state;
+	
+	public Customer(){}
+	
+	public int getCustomerNo() {
+		return customerNo;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCustomerNo(int customerNo) {
+		this.customerNo = customerNo;
 	}
 	public String getFristName() {
 		return fristName;
@@ -23,38 +32,38 @@ public class Customer {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((fristName == null) ? 0 : fristName.hashCode());
-		result = prime * result + id;
-		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
-		return result;
+	public String getEmail() {
+		return email;
 	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Customer other = (Customer) obj;
-		if (fristName == null) {
-			if (other.fristName != null)
-				return false;
-		} else if (!fristName.equals(other.fristName))
-			return false;
-		if (id != other.id)
-			return false;
-		if (lastName == null) {
-			if (other.lastName != null)
-				return false;
-		} else if (!lastName.equals(other.lastName))
-			return false;
-		return true;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	} 
+	
+	 
 	
 	
 }
