@@ -2,12 +2,13 @@ package org.mum.hotel.domain;
 
 import java.util.Date;
 
-
 public class Booking {
 
 	int bookingNo;
 	int roomNo;
 	Customer customer;
+	Room bookedRoom;
+	Billing bookingBill;
 	Date bookingDate;
 	Date checkInDate;
 	Date checkoutDate;
