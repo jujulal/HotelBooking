@@ -1,24 +1,32 @@
 package org.mum.hotel.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
+
+@Entity
 public class Room {
 	
+	@Id @GeneratedValue
 	private int roomNo;
-	private int roomTypeNo;
 	private String description;
 	private boolean bookedStatus;
 	private int noOfPersons;
 	
+	@ManyToOne
+	@JoinColumn(name="roomTypeNo")
+	private RoomType roomType;
+	
 	public Room(){
 		
 	}
-
 	public int getRoomNo() {
 		return roomNo;
 	}
-	public int getRoomTypeNo() {
-		return roomTypeNo;
-	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -33,10 +41,6 @@ public class Room {
 		this.roomNo = roomNo;
 	}
 
-	public void setRoomTypeNo(int roomTypeNo) {
-		this.roomTypeNo = roomTypeNo;
-	}
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
@@ -48,4 +52,11 @@ public class Room {
 	public void setNoOfPersons(int noOfPersons) {
 		this.noOfPersons = noOfPersons;
 	}
+	public RoomType getRoomType() {
+		return roomType;
+	}
+	public void setRoomType(RoomType roomType) {
+		this.roomType = roomType;
+	}
+	
 }
