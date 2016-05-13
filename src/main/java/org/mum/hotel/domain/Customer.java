@@ -1,6 +1,8 @@
 package org.mum.hotel.domain;
 
+import javax.persistence.Entity;
 
+@Entity
 public class Customer {
 	
 	private int customerNo; 
