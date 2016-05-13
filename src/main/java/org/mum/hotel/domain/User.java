@@ -1,7 +1,16 @@
 package org.mum.hotel.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "User")
 public class User {
 	//userclass
+	@Id
+	@GeneratedValue
 	int userID;
 	String firstName;
 	String lastName;
